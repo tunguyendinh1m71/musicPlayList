@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="playMusic.css">
+    <script src="https://kit.fontawesome.com/4248e87aa2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="music-player">
+            <img src = "" id = "song-img">
+            <h1 id = "songName"></h1>
+            <p id = "artistName"></p>
+
+            <audio id = "song" src = ""></audio>
+
+            <div id = "song-slider">
+                <span id = "music-current">00:00</span>
+                <input type="range" value="0" id = "Progress">
+                <span id = "music-duration">00:00</span>
+            </div>
+            
+            <div class="volume-control">
+                <i class="fa-solid fa-volume-xmark" id = "volIcon"></i>
+                <input type="range" id="volumeSlider" min = "0" max = "100" value="50">
+                <i class="fa-solid fa-volume-high" id = "volIcon"></i>
+            </div>
+
+            <div class="controls">
+                <div onclick="playBackward()">
+                    <i class="fa-solid fa-backward" id = "ctrlBackward"></i>
+                </div>
+                <div onclick = "playPause()" >
+                    <i class="fa-solid fa-play" id = "ctrlIcon"></i>
+                </div>
+                <div onclick="playForward()">
+                    <i class="fa-solid fa-forward" id = "ctrlForward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="playMusic.js"></script>
+    
+</body>
+</html>
